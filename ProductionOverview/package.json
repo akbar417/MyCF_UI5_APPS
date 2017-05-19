@@ -1,0 +1,10 @@
+{
+	"name": "productionoverview",
+	"scripts":{
+		"start": "node app.js"
+	},
+	"description": "Production Overview of Oil and Gas PdMS",
+	"dependencies":{
+		"express": "4.14.0"
+	}
+}

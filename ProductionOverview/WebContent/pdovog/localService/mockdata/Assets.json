@@ -1,0 +1,20 @@
+[
+	{
+		"__metadata": {
+			"uri": "https://lddbog1.mo.sap.corp:51039/pdmsogservices.xsodata/Assets('14886428682241')",
+			"type": "com.sap.pdms.og.pdmsogservices.AssetsType"
+		},
+		"IdNum": "14886428682241",
+		"ThingType": "com.sap.pdms.og:ElectricSubmersiblePump",
+		"Description": "Electric Submersible Pump"
+	},
+	{
+		"__metadata": {
+			"uri": "https://lddbog1.mo.sap.corp:51039/pdmsogservices.xsodata/Assets('14886428682242')",
+			"type": "com.sap.pdms.og.pdmsogservices.AssetsType"
+		},
+		"IdNum": "14886428682242",
+		"ThingType": "com.sap.pdms.og:RodPump",
+		"Description": "Rod Pump"
+	}
+]

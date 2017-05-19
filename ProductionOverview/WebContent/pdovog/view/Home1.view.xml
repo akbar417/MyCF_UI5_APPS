@@ -1,0 +1,134 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mc="sap.suite.ui.microchart"
+	xmlns:smartFilterBar="sap.ui.comp.smartfilterbar" xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" xmlns:viz="sap.viz.ui5.controls"
+	xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" xmlns:viz.data="sap.viz.ui5.data"
+	xmlns:microChart="sap.suite.ui.microchart" xmlns:table="sap.ui.table"
+	xmlns:fb="sap.ui.comp.filterbar" xmlns:l="sap.ui.layout" xmlns:form="sap.ui.layout.form"
+	xmlns="sap.m" xmlns:u="sap.ui.unified" controllerName="com.pdms.og.production_overview.controller.App"
+	displayBlock="true">
+	<u:Shell id="myShell" icon="{viewData>/logo}">
+		<u:user>
+			<u:ShellHeadUserItem image="sap-icon://person-placeholder"
+				username="{config>/userId}" press="onUserItemPressed" />
+		</u:user>
+		<u:search>
+			<Text width="100%" textAlign="Center" text="{i18n&gt;HOME_VIEW_TITLE}" />
+		</u:search>
+		<Page id="poPageHome" showHeader="false">
+			<!-- <customHeader> <Bar> <contentMiddle> <Text text="{i18n&gt;HOME_VIEW_TITLE}" 
+				/> </contentMiddle> <contentRight> <Text text="{parts : [{path: 'i18n>LAST_UPDATED_TEXT'}, 
+				{path:'viewData>/LastUpdatedTime'}], formatter : 'jQuery.sap.formatMessage' 
+				}" /> </contentRight> </Bar> </customHeader> -->
+			<content>
+				<HBox justifyContent="End">
+					<Text class="sapUiTinyMargin"
+						text="{parts : [{path: 'i18n>LAST_UPDATED_TEXT'},
+							{path:'viewData>/LastUpdatedTime'}],
+							formatter : 'jQuery.sap.formatMessage'
+							}" />
+				</HBox>
+				<fb:FilterBar reset="onReset" search="onFilterBarGoPress"
+					showFilterConfiguration="false">
+					<fb:filterItems>
+						<fb:FilterItem name="poFilterItemGeography"
+							label="{i18n>GEOGRAPHY_FILTER_ITEM_LABEL}" labelTooltip="{i18n>GEOGRAPHY_FILTER_ITEM_TOOLTIP}">
+							<fb:control>
+								<!-- <ComboBox items="{/Orgs}"> <core:Item key="{Key}" text="{Value}"/> 
+									</ComboBox> -->
+								<Input id="poInputGeography" value="{viewData>/Geography}"
+									type="Text" showValueHelp="true" valueHelpRequest="onShowGeographyValueHelp" />
+							</fb:control>
+						</fb:FilterItem>
+						<fb:FilterItem name="poFilterItemAssetType"
+							label="{i18n>ASSET_TYPE_FILTER_ITEM_LABEL}" labelTooltip="{i18n>ASSET_TYPE_FILTER_ITEM_TOOLTIP}"
+							mandatory="true">
+							<fb:control>
+								<ComboBox items="{/AssetTypes}" selectedKey="{viewData>/AssetType}">
+									<core:Item key="{ThingType}" text="{Description}" />
+								</ComboBox>
+							</fb:control>
+						</fb:FilterItem>
+					</fb:filterItems>
+				</fb:FilterBar>
+				<l:VerticalLayout width="100%">
+					<l:Grid>
+						<VBox id="poInterventionsContainer">
+							<items>
+								<ScrollContainer height="10%" width="100%"
+									vertical="true" focusable="true">
+									<List id="poListInterventions" items="{path : '/Interventions'}"
+										updateFinished="onInterventionsUpdateFinished" growing="true"
+										growingThreshold="10" growingScrollToLoad="false">
+										<headerToolbar>
+											<Toolbar>
+												<content>
+													<HBox>
+														<Label text="{i18n>PRIORITY_LIST_HEADER_LABEL}"
+															tooltip="{i18n>PRIORITY_LIST_HEADER_TOOLTIP}" />
+														<Label text="{i18n>INTERVENTION_LIST_HEADER_LABEL}"
+															tooltip="{i18n>INTERVENTION_LIST_HEADER_TOOLTIP}" class="sapUiTinyMarginBegin" />
+													</HBox>
+												</content>
+											</Toolbar>
+										</headerToolbar>
+										<CustomListItem type="Active" press="onInterventionPress">
+											<HBox alignItems="Center" class="sapUiSmallMargin">
+												<core:Icon class="sapUiTinyMargin"
+													src="{path:'Status', formatter:'.formatter.getIconURI'}"
+													color="{path:'Status', formatter:'.formatter.getIconColor'}" />
+												<Text text="{ThingName} {Description}" class="sapUiSmallMarginBegin" />
+											</HBox>
+										</CustomListItem>
+										<layoutData>
+											<FlexItemData growFactor="1" />
+										</layoutData>
+									</List>
+								</ScrollContainer>
+
+							</items>
+							<layoutData>
+								<l:GridData span="L3 M6 S12" />
+							</layoutData>
+						</VBox>
+						<VBox>
+							<items>
+								<l:VerticalLayout width="100%"
+									id="poProductionsalesMarketingContainer">
+									<l:Grid>
+										<VBox id="poProductionCommitmentContainer">
+											<layoutData>
+												<l:GridData span="L6 M6 S12" />
+											</layoutData>
+										</VBox>
+										<VBox id="poSalesMarketingContainer">
+											<layoutData>
+												<l:GridData span="L3 M6 S12" />
+											</layoutData>
+										</VBox>
+									</l:Grid>
+								</l:VerticalLayout>
+								<l:VerticalLayout width="100%">
+									<l:Grid>
+										<VBox id="poProductionPlanningContainer">
+											<layoutData>
+												<l:GridData span="L3 M6 S12" />
+											</layoutData>
+										</VBox>
+									</l:Grid>
+								</l:VerticalLayout>
+							</items>
+							<layoutData>
+								<l:GridData span="L9 M12 S12" />
+							</layoutData>
+						</VBox>
+					</l:Grid>
+				</l:VerticalLayout>
+			</content>
+			<dependents>
+				<core:Fragment fragmentName="com.pdms.og.production_overview.fragment.BusyDialog"
+					type="XML">
+				</core:Fragment>
+			</dependents>
+		</Page>
+	</u:Shell>
+</mvc:View>

@@ -1,0 +1,54 @@
+[
+  {
+    "__metadata": {
+      "uri": "https://lddbog1.mo.sap.corp:52500/api/pdovog/ProductionOverviewService.xsodata/Production('148888164890220')",
+      "type": "com.sap.pdms.og.pdmsogservices.ProductionType"
+    },
+    "DATE": "2017-03-23T00:00:00.000Z",
+    "PropertyId": "Oil",
+    "HOUR": "02",
+    "OrgUnitID": "e447224e69114c73b803d6494e13bf69",
+    "OrgUnitName": "Fayetteville",
+    "ActualValue": "10",
+    "PlannedValue": "6"
+  },
+  {
+    "__metadata": {
+      "uri": "https://lddbog1.mo.sap.corp:52500/api/pdovog/ProductionOverviewService.xsodata/Production('148888164890220')",
+      "type": "com.sap.pdms.og.pdmsogservices.ProductionType"
+    },
+    "DATE": "2017-03-27T00:00:00.000Z",
+    "PropertyId": "Oil",
+    "HOUR": "04",
+    "OrgUnitID": "e447224e69114c73b803d6494e13bf69",
+    "OrgUnitName": "Fayetteville",
+    "ActualValue": "15",
+    "PlannedValue": "10"
+  },
+  {
+    "__metadata": {
+      "uri": "https://lddbog1.mo.sap.corp:52500/api/pdovog/ProductionOverviewService.xsodata/Production('148888164890221')",
+      "type": "com.sap.pdms.og.pdmsogservices.ProductionType"
+    },
+    "DATE": "2017-03-23T00:00:00.000Z",
+    "PropertyId": "Gas",
+    "HOUR": "02",
+    "OrgUnitID": "07dc83c937954b158530d26761b50057",
+    "OrgUnitName": "Echira XOM1",
+    "ActualValue": "14",
+    "PlannedValue": "28"
+  },
+  {
+    "__metadata": {
+      "uri": "https://lddbog1.mo.sap.corp:52500/api/pdovog/ProductionOverviewService.xsodata/Production('148888164890221')",
+      "type": "com.sap.pdms.og.pdmsogservices.ProductionType"
+    },
+    "DATE": "2017-03-27T00:00:00.000Z",
+    "PropertyId": "Gas",
+    "HOUR": "04",
+    "OrgUnitID": "07dc83c937954b158530d26761b50057",
+    "OrgUnitName": "Echira XOM1",
+    "ActualValue": "12",
+    "PlannedValue": "24"
+  }
+]

@@ -1,0 +1,152 @@
+[
+	{
+		"__metadata": {
+			"uri": "https://lddbog1.mo.sap.corp:52500/api/pdms/og/core/svc/OGCoreServices.xsodata/InsRate('14914756351831')",
+			"type": "com.sap.pdms.og.pdmsogservices.InsRateType"
+		},
+		"IdNum": "14914756351831",
+		"NextValue": "/Date(1490658600000)/",
+		"PropertyId": "Gas",
+		"Thing": "7b2a9918d374448a9db3850b30b93d30",
+		"Timestamp": "/Date(1490658900000)/",
+		"ActualRate": "864",
+		"PlannedValue": "3",
+		"ActualValue": "3",
+		"PlannedRate": "864"
+	},
+	{
+		"__metadata": {
+			"uri": "https://lddbog1.mo.sap.corp:52500/api/pdms/og/core/svc/OGCoreServices.xsodata/InsRate('14914756351832')",
+			"type": "com.sap.pdms.og.pdmsogservices.InsRateType"
+		},
+		"IdNum": "14914756351832",
+		"NextValue": "/Date(1490658600000)/",
+		"PropertyId": "Gas",
+		"Thing": "8e8aef24fba94beea399117ed72d42a1",
+		"Timestamp": "/Date(1490658900000)/",
+		"ActualRate": "864",
+		"PlannedValue": "8",
+		"ActualValue": "3",
+		"PlannedRate": "2304"
+	},
+	{
+		"__metadata": {
+			"uri": "https://lddbog1.mo.sap.corp:52500/api/pdms/og/core/svc/OGCoreServices.xsodata/InsRate('14914756351833')",
+			"type": "com.sap.pdms.og.pdmsogservices.InsRateType"
+		},
+		"IdNum": "14914756351833",
+		"NextValue": "/Date(1490658600000)/",
+		"PropertyId": "Gas",
+		"Thing": "994af1584808420593e4d72517401f61",
+		"Timestamp": "/Date(1490658900000)/",
+		"ActualRate": "864",
+		"PlannedValue": "3",
+		"ActualValue": "3",
+		"PlannedRate": "864"
+	},
+	{
+		"__metadata": {
+			"uri": "https://lddbog1.mo.sap.corp:52500/api/pdms/og/core/svc/OGCoreServices.xsodata/InsRate('14914756351834')",
+			"type": "com.sap.pdms.og.pdmsogservices.InsRateType"
+		},
+		"IdNum": "14914756351834",
+		"NextValue": "/Date(1490658600000)/",
+		"PropertyId": "Oil",
+		"Thing": "7b2a9918d374448a9db3850b30b93d30",
+		"Timestamp": "/Date(1490658900000)/",
+		"ActualRate": "5760",
+		"PlannedValue": "20",
+		"ActualValue": "20",
+		"PlannedRate": "5760"
+	},
+	{
+		"__metadata": {
+			"uri": "https://lddbog1.mo.sap.corp:52500/api/pdms/og/core/svc/OGCoreServices.xsodata/InsRate('14914756351835')",
+			"type": "com.sap.pdms.og.pdmsogservices.InsRateType"
+		},
+		"IdNum": "14914756351835",
+		"NextValue": "/Date(1490658600000)/",
+		"PropertyId": "Oil",
+		"Thing": "8e8aef24fba94beea399117ed72d42a1",
+		"Timestamp": "/Date(1490658900000)/",
+		"ActualRate": "5760",
+		"PlannedValue": "20",
+		"ActualValue": "20",
+		"PlannedRate": "5760"
+	},
+	{
+		"__metadata": {
+			"uri": "https://lddbog1.mo.sap.corp:52500/api/pdms/og/core/svc/OGCoreServices.xsodata/InsRate('14914756351836')",
+			"type": "com.sap.pdms.og.pdmsogservices.InsRateType"
+		},
+		"IdNum": "14914756351836",
+		"NextValue": "/Date(1490658600000)/",
+		"PropertyId": "Oil",
+		"Thing": "994af1584808420593e4d72517401f61",
+		"Timestamp": "/Date(1490658900000)/",
+		"ActualRate": "5760",
+		"PlannedValue": "20",
+		"ActualValue": "20",
+		"PlannedRate": "5760"
+	},
+	{
+		"__metadata": {
+			"uri": "https://lddbog1.mo.sap.corp:52500/api/pdms/og/core/svc/OGCoreServices.xsodata/InsRate('14914756351837')",
+			"type": "com.sap.pdms.og.pdmsogservices.InsRateType"
+		},
+		"IdNum": "14914756351837",
+		"NextValue": "/Date(1491004200000)/",
+		"PropertyId": "Gas",
+		"Thing": "8282073f96d64e47819a5d8c26592e98",
+		"Timestamp": "/Date(1491004500000)/",
+		"ActualRate": "864",
+		"PlannedValue": "8",
+		"ActualValue": "3",
+		"PlannedRate": "2304"
+	},
+	{
+		"__metadata": {
+			"uri": "https://lddbog1.mo.sap.corp:52500/api/pdms/og/core/svc/OGCoreServices.xsodata/InsRate('14914756351848')",
+			"type": "com.sap.pdms.og.pdmsogservices.InsRateType"
+		},
+		"IdNum": "14914756351848",
+		"NextValue": "/Date(1491004200000)/",
+		"PropertyId": "Gas",
+		"Thing": "9319fccb302d48dc9eaaff86205a6a5d",
+		"Timestamp": "/Date(1491004500000)/",
+		"ActualRate": "864",
+		"PlannedValue": "8",
+		"ActualValue": "3",
+		"PlannedRate": "2304"
+	},
+	{
+		"__metadata": {
+			"uri": "https://lddbog1.mo.sap.corp:52500/api/pdms/og/core/svc/OGCoreServices.xsodata/InsRate('14914756351849')",
+			"type": "com.sap.pdms.og.pdmsogservices.InsRateType"
+		},
+		"IdNum": "14914756351849",
+		"NextValue": "/Date(1491004200000)/",
+		"PropertyId": "Oil",
+		"Thing": "8282073f96d64e47819a5d8c26592e98",
+		"Timestamp": "/Date(1491004500000)/",
+		"ActualRate": "5760",
+		"PlannedValue": "20",
+		"ActualValue": "20",
+		"PlannedRate": "5760"
+	},
+	{
+		"__metadata": {
+			"uri": "https://lddbog1.mo.sap.corp:52500/api/pdms/og/core/svc/OGCoreServices.xsodata/InsRate('149147563518410')",
+			"type": "com.sap.pdms.og.pdmsogservices.InsRateType"
+		},
+		"IdNum": "149147563518410",
+		"NextValue": "/Date(1491004200000)/",
+		"PropertyId": "Oil",
+		"Thing": "9319fccb302d48dc9eaaff86205a6a5d",
+		"Timestamp": "/Date(1491004500000)/",
+		"ActualRate": "5760",
+		"PlannedValue": "20",
+		"ActualValue": "20",
+		"PlannedRate": "5760"
+	}
+]

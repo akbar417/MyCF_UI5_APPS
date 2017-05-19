@@ -1,0 +1,361 @@
+<edmx:Edmx Version="1.0"
+	xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+	<edmx:DataServices m:DataServiceVersion="2.0"
+		xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+		<Schema Namespace="com.sap.pdms.og.production-overview.services"
+			xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+			xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+			xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityType Name="InterventionsType">
+				<Key>
+					<PropertyRef Name="IdNum" />
+				</Key>
+				<Property Name="IdNum" Type="Edm.String" Nullable="false"
+					MaxLength="2147483647" />
+				<Property Name="OrgUnitDescription" Type="Edm.String"
+					MaxLength="60" />
+				<Property Name="OrgUnitID" Type="Edm.String" MaxLength="5000" />
+				<Property Name="OrgUnitName" Type="Edm.String" MaxLength="255" />
+				<Property Name="OrgUnitTenant" Type="Edm.String" MaxLength="36" />
+				<Property Name="OrgUnitType" Type="Edm.String" MaxLength="81" />
+				<Property Name="WellID" Type="Edm.String" MaxLength="5000" />
+				<Property Name="WellName" Type="Edm.String" MaxLength="255" />
+				<Property Name="Thing" Type="Edm.String" MaxLength="32" />
+				<Property Name="ThingDescription" Type="Edm.String"
+					MaxLength="60" />
+				<Property Name="ThingExternalId" Type="Edm.String"
+					MaxLength="255" />
+				<Property Name="ThingName" Type="Edm.String" MaxLength="255" />
+				<Property Name="ThingTenant" Type="Edm.String" MaxLength="36" />
+				<Property Name="ThingType" Type="Edm.String" MaxLength="81" />
+				<Property Name="ThingTypeDescription" Type="Edm.String"
+					MaxLength="60" />
+				<Property Name="ThingTypePackage" Type="Edm.String"
+					MaxLength="50" />
+				<Property Name="ThingTypeVersion" Type="Edm.Int64" />
+				<Property Name="ThingValidityEndDateTime" Type="Edm.DateTime" />
+				<Property Name="ThingValidityStartDateTime" Type="Edm.DateTime" />
+				<Property Name="extendedThingType" Type="Edm.String"
+					MaxLength="81" />
+				<Property Name="Timestamp" Type="Edm.DateTime" />
+				<Property Name="Description" Type="Edm.String" MaxLength="200" />
+				<Property Name="ExternalId" Type="Edm.String" MaxLength="255" />
+				<Property Name="BusinessTimestamp" Type="Edm.DateTime" />
+				<Property Name="Status" Type="Edm.String" MaxLength="10" />
+				<Property Name="Type" Type="Edm.String" MaxLength="81" />
+				<Property Name="Severity" Type="Edm.Int32" />
+				<Property Name="Code" Type="Edm.String" MaxLength="10" />
+				<Property Name="Source" Type="Edm.String" MaxLength="100" />
+				<Property Name="ThingId" Type="Edm.String" MaxLength="32" />
+				<Property Name="Property" Type="Edm.String" MaxLength="255" />
+				<Property Name="Event" Type="Edm.String" MaxLength="32" />
+				<Property Name="Tenant" Type="Edm.String" MaxLength="36" />
+			</EntityType>
+			<EntityType Name="AssetsType">
+				<Key>
+					<PropertyRef Name="IdNum" />
+				</Key>
+				<Property Name="IdNum" Type="Edm.String" Nullable="false"
+					MaxLength="2147483647" />
+				<Property Name="ThingType" Type="Edm.String" MaxLength="81" />
+				<Property Name="Description" Type="Edm.String" MaxLength="60" />
+			</EntityType>
+
+			<EntityType Name="OrgsType">
+				<Key>
+					<PropertyRef Name="IdNum" />
+				</Key>
+				<Property Name="IdNum" Type="Edm.String" Nullable="false"
+					MaxLength="2147483647" />
+				<Property Name="OrgUnitID" Type="Edm.String" MaxLength="200" />
+				<Property Name="ParentOrgUnitID" Type="Edm.String"
+					MaxLength="200" />
+				<Property Name="HierarchyTenant" Type="Edm.String"
+					MaxLength="36" />
+				<Property Name="AdditionalCityName" Type="Edm.String"
+					MaxLength="255" />
+				<Property Name="AdditionalStreetPrefixName" Type="Edm.String"
+					MaxLength="255" />
+				<Property Name="AdditionalStreetSuffixName" Type="Edm.String"
+					MaxLength="255" />
+				<Property Name="AddressRepISOCode" Type="Edm.String"
+					MaxLength="4" />
+				<Property Name="AddressRepNumericISOCode" Type="Edm.Int32" />
+				<Property Name="AddressRepresentationDescription" Type="Edm.String"
+					MaxLength="60" />
+				<Property Name="AddressRepresentationISOCode" Type="Edm.String"
+					MaxLength="1" />
+				<Property Name="Building" Type="Edm.String" MaxLength="10" />
+				<Property Name="CareOfName" Type="Edm.String" MaxLength="255" />
+				<Property Name="CityName" Type="Edm.String" MaxLength="255" />
+				<Property Name="CommunicationID" Type="Edm.String"
+					MaxLength="32" />
+				<Property Name="CountryDescription" Type="Edm.String"
+					MaxLength="60" />
+				<Property Name="CountryDescriptionShort" Type="Edm.String"
+					MaxLength="15" />
+				<Property Name="CountryISO3Code" Type="Edm.String"
+					MaxLength="3" />
+				<Property Name="CountryNationality" Type="Edm.String"
+					MaxLength="60" />
+				<Property Name="CountryNumericISOCode" Type="Edm.String"
+					MaxLength="3" />
+				<Property Name="CountryPostalCodeLength" Type="Edm.Int32" />
+				<Property Name="Country_ISOCode" Type="Edm.String"
+					MaxLength="2" />
+				<Property Name="District" Type="Edm.String" MaxLength="255" />
+				<Property Name="ETagVersion" Type="Edm.Int64" />
+				<Property Name="Floor" Type="Edm.String" MaxLength="10" />
+				<Property Name="GeoLocationID" Type="Edm.String" MaxLength="32" />
+				<Property Name="HouseNumber" Type="Edm.String" MaxLength="10" />
+				<Property Name="HouseNumberSupplementText" Type="Edm.String"
+					MaxLength="10" />
+				<Property Name="POBox" Type="Edm.String" MaxLength="10" />
+				<Property Name="POBoxDeviatingCityName" Type="Edm.String"
+					MaxLength="255" />
+				<Property Name="POBoxDeviatingCountry_ISOCode" Type="Edm.String"
+					MaxLength="2" />
+				<Property Name="POBoxDeviatingRegionCode" Type="Edm.String"
+					MaxLength="3" />
+				<Property Name="POBoxIsWithoutNumber" Type="Edm.Int32" />
+				<Property Name="POBoxLobbyName" Type="Edm.String"
+					MaxLength="255" />
+				<Property Name="POBoxPostalCode" Type="Edm.String"
+					MaxLength="10" />
+				<Property Name="PostalAddressID" Type="Edm.String"
+					MaxLength="32" />
+				<Property Name="PostalCode" Type="Edm.String" MaxLength="10" />
+				<Property Name="RegionCode" Type="Edm.String" MaxLength="3" />
+				<Property Name="RegionDescription" Type="Edm.String"
+					MaxLength="60" />
+				<Property Name="Room" Type="Edm.String" MaxLength="10" />
+				<Property Name="StreetName" Type="Edm.String" MaxLength="255" />
+				<Property Name="StreetPrefixName" Type="Edm.String"
+					MaxLength="255" />
+				<Property Name="StreetSuffixName" Type="Edm.String"
+					MaxLength="255" />
+				<Property Name="OrgUnitDescription" Type="Edm.String"
+					MaxLength="60" />
+				<Property Name="OrgUnitExternalId" Type="Edm.String"
+					MaxLength="255" />
+				<Property Name="OrgUnitName" Type="Edm.String" MaxLength="255" />
+				<Property Name="OrgUnitType" Type="Edm.String" MaxLength="81" />
+				<Property Name="OrgUnitTypeDescription" Type="Edm.String"
+					MaxLength="60" />
+				<Property Name="OrgUnitTypePackage" Type="Edm.String"
+					MaxLength="50" />
+				<Property Name="OrgUnitTypeVersion" Type="Edm.Int64" />
+				<Property Name="ParentOrgUnitName" Type="Edm.String"
+					MaxLength="255" />
+				<Property Name="IS_LEAF" Type="Edm.Int32" />
+				<Property Name="LEVEL" Type="Edm.Int32" />
+				<Property Name="CC_IS_LEAF" Type="Edm.String" MaxLength="1" />
+			</EntityType>
+
+
+			<EntityType Name="InsRateOilType">
+				<Key>
+					<PropertyRef Name="RateNum" />
+				</Key>
+				<Property Name="RateNum" Type="Edm.String" Nullable="false"
+					MaxLength="2147483647" />
+				<Property Name="ActualValue" Type="Edm.Double" />
+				<Property Name="TargetValue" Type="Edm.Double" />
+			</EntityType>
+			<EntityType Name="InsRateGasType">
+				<Key>
+					<PropertyRef Name="RateNum" />
+				</Key>
+				<Property Name="RateNum" Type="Edm.String" Nullable="false"
+					MaxLength="2147483647" />
+				<Property Name="ActualValue" Type="Edm.Double" />
+				<Property Name="PlannedValue" Type="Edm.Double" />
+			</EntityType>
+			<EntityType Name="EventTypesType">
+				<Key>
+					<PropertyRef Name="TypeNum" />
+				</Key>
+				<Property Name="TypeNum" Type="Edm.String" Nullable="false"
+					MaxLength="2147483647" />
+				<Property Name="Status" Type="Edm.String" MaxLength="10" />
+				<Property Name="Key" Type="Edm.String" MaxLength="10" />
+			</EntityType>
+			<EntityType Name="SalesType">
+				<Key>
+					<PropertyRef Name="IdNum" />
+				</Key>
+				<Property Name="IdNum" Type="Edm.String" Nullable="false"
+					MaxLength="2147483647" />
+				<Property Name="PLANNEDVALUE" Type="Edm.Double" />
+				<Property Name="ACTUALVALUE" Type="Edm.Double" />
+				<Property Name="CustomerName" Type="Edm.String" MaxLength="256" />
+				<Property Name="ReadingsThing" Type="Edm.String" MaxLength="32" />
+				<Property Name="ReadingsThingType" Type="Edm.String"
+					MaxLength="81" />
+				<Property Name="DATE" Type="Edm.DateTime" />
+				<Property Name="DAY" Type="Edm.String" MaxLength="2" />
+				<Property Name="QUARTER" Type="Edm.String" MaxLength="2" />
+				<Property Name="YEAR" Type="Edm.String" MaxLength="4" />
+				<Property Name="ReadingsPropertyId" Type="Edm.String"
+					MaxLength="30" />
+				<Property Name="OrgUnitName" Type="Edm.String" MaxLength="255" />
+				<Property Name="OrgUnitID" Type="Edm.String" Nullable="false"
+					MaxLength="5000" />
+			</EntityType>
+			<EntityType Name="ProdOilTodayType">
+				<Key>
+					<PropertyRef Name="ProdId" />
+				</Key>
+				<Property Name="ProdId" Type="Edm.String" Nullable="false"
+					MaxLength="2147483647" />
+				<Property Name="CC_Today" Type="Edm.String" MaxLength="1" />
+				<Property Name="CC_TimestampDate" Type="Edm.String"
+					MaxLength="1" />
+				<Property Name="Timestamp" Type="Edm.DateTime" />
+				<Property Name="PropertySetTypeId" Type="Edm.String"
+					MaxLength="30" />
+				<Property Name="NODE" Type="Edm.String" MaxLength="5000" />
+				<Property Name="TotalValue" Type="Edm.Double" />
+			</EntityType>
+			<EntityType Name="ProdGasTodayType">
+				<Key>
+					<PropertyRef Name="ProdId" />
+				</Key>
+				<Property Name="ProdId" Type="Edm.String" Nullable="false"
+					MaxLength="2147483647" />
+				<Property Name="CC_Today" Type="Edm.String" MaxLength="1" />
+				<Property Name="CC_TimestampDate" Type="Edm.String"
+					MaxLength="1" />
+				<Property Name="NODE" Type="Edm.String" MaxLength="5000" />
+				<Property Name="TotalValue" Type="Edm.Double" />
+				<Property Name="Timestamp" Type="Edm.DateTime" />
+				<Property Name="PropertySetTypeId" Type="Edm.String"
+					MaxLength="30" />
+			</EntityType>
+			<EntityType Name="ProdOilYesdayType">
+				<Key>
+					<PropertyRef Name="ProdId" />
+				</Key>
+				<Property Name="ProdId" Type="Edm.String" Nullable="false"
+					MaxLength="2147483647" />
+				<Property Name="CC_Today" Type="Edm.String" MaxLength="1" />
+				<Property Name="CC_TimestampDate" Type="Edm.String"
+					MaxLength="1" />
+				<Property Name="Timestamp" Type="Edm.DateTime" />
+				<Property Name="PropertySetTypeId" Type="Edm.String"
+					MaxLength="30" />
+				<Property Name="NODE" Type="Edm.String" MaxLength="5000" />
+				<Property Name="TotalValue" Type="Edm.Double" />
+			</EntityType>
+			<EntityType Name="ProdGasYesdayType">
+				<Key>
+					<PropertyRef Name="ProdId" />
+				</Key>
+				<Property Name="ProdId" Type="Edm.String" Nullable="false"
+					MaxLength="2147483647" />
+				<Property Name="CC_Today" Type="Edm.String" MaxLength="1" />
+				<Property Name="CC_TimestampDate" Type="Edm.String"
+					MaxLength="1" />
+				<Property Name="NODE" Type="Edm.String" MaxLength="5000" />
+				<Property Name="TotalValue" Type="Edm.Double" />
+				<Property Name="Timestamp" Type="Edm.DateTime" />
+				<Property Name="PropertySetTypeId" Type="Edm.String"
+					MaxLength="30" />
+			</EntityType>
+			<EntityType Name="ProdCommitType">
+				<Key>
+					<PropertyRef Name="ProdId" />
+				</Key>
+				<Property Name="ProdId" Type="Edm.String" Nullable="false"
+					MaxLength="2147483647" />
+				<Property Name="NODE" Type="Edm.String" MaxLength="5000" />
+				<Property Name="SUM(PropertyValue)" Type="Edm.Double" />
+				<Property Name="PropertyId" Type="Edm.String" MaxLength="30" />
+				<Property Name="PropertySetTypeId" Type="Edm.String"
+					MaxLength="30" />
+				<Property Name="ThingType" Type="Edm.String" MaxLength="81" />
+				<Property Name="TO_DATE(Timestamp)" Type="Edm.DateTime" />
+			</EntityType>
+			<EntityType Name="ProductionType">
+				<Key>
+					<PropertyRef Name="IdNum" />
+				</Key>
+				<Property Name="IdNum" Type="Edm.String" Nullable="false"
+					MaxLength="2147483647" />
+				<Property Name="DATE" Type="Edm.DateTime" />
+				<Property Name="DAY" Type="Edm.String" MaxLength="2" />
+				<Property Name="DAY_OF_WEEK" Type="Edm.String" MaxLength="1" />
+				<Property Name="DAY_OF_YEAR" Type="Edm.String" MaxLength="3" />
+				<Property Name="HOUR" Type="Edm.String" MaxLength="2" />
+				<Property Name="MINUTE" Type="Edm.String" MaxLength="2" />
+				<Property Name="MONTH" Type="Edm.String" MaxLength="2" />
+				<Property Name="PropertyId" Type="Edm.String" MaxLength="30" />
+				<Property Name="PropertySetTypeId" Type="Edm.String"
+					MaxLength="30" />
+				<Property Name="QUARTER" Type="Edm.String" MaxLength="2" />
+				<Property Name="ROUNDED_TS" Type="Edm.DateTime" />
+				<Property Name="SECOND" Type="Edm.String" MaxLength="2" />
+				<Property Name="TIMESTAMP" Type="Edm.DateTime" />
+				<Property Name="Thing" Type="Edm.String" MaxLength="32" />
+				<Property Name="ThingType" Type="Edm.String" MaxLength="81" />
+				<Property Name="WEEK" Type="Edm.String" MaxLength="2" />
+				<Property Name="YEAR" Type="Edm.String" MaxLength="4" />
+				<Property Name="ThingDescription" Type="Edm.String"
+					MaxLength="60" />
+				<Property Name="ThingExternalId" Type="Edm.String"
+					MaxLength="255" />
+				<Property Name="ThingName" Type="Edm.String" MaxLength="255" />
+				<Property Name="ThingTenant" Type="Edm.String" MaxLength="36" />
+				<Property Name="ThingTypeDescription" Type="Edm.String"
+					MaxLength="60" />
+				<Property Name="ThingTypePackage" Type="Edm.String"
+					MaxLength="50" />
+				<Property Name="ThingTypeVersion" Type="Edm.Int64" />
+				<Property Name="ThingValidityEndDateTime" Type="Edm.DateTime" />
+				<Property Name="ThingValidityStartDateTime" Type="Edm.DateTime" />
+				<Property Name="extendedThingType" Type="Edm.String"
+					MaxLength="81" />
+				<Property Name="EQUIPMENTID" Type="Edm.String" MaxLength="256" />
+				<Property Name="OrgUnitDescription" Type="Edm.String"
+					MaxLength="60" />
+				<Property Name="OrgUnitID" Type="Edm.String" MaxLength="5000" />
+				<Property Name="OrgUnitName" Type="Edm.String" MaxLength="255" />
+				<Property Name="OrgUnitTenant" Type="Edm.String" MaxLength="36" />
+				<Property Name="OrgUnitType" Type="Edm.String" MaxLength="81" />
+				<Property Name="WellID" Type="Edm.String" MaxLength="5000" />
+				<Property Name="WellName" Type="Edm.String" MaxLength="255" />
+				<Property Name="ActualValue" Type="Edm.Double" />
+				<Property Name="PlannedValue" Type="Edm.Double" />
+			</EntityType>
+			<EntityContainer Name="v2"
+				m:IsDefaultEntityContainer="true">
+				<EntitySet Name="Interventions"
+					EntityType="com.sap.pdms.og.production-overview.services.InterventionsType" />
+				<EntitySet Name="Assets"
+					EntityType="com.sap.pdms.og.production-overview.services.AssetsType" />
+				<EntitySet Name="Orgs"
+					EntityType="com.sap.pdms.og.production-overview.services.OrgsType" />
+				<EntitySet Name="InsRateOil"
+					EntityType="com.sap.pdms.og.production-overview.services.InsRateOilType" />
+				<EntitySet Name="InsRateGas"
+					EntityType="com.sap.pdms.og.production-overview.services.InsRateGasType" />
+				<EntitySet Name="EventTypes"
+					EntityType="com.sap.pdms.og.production-overview.services.EventTypesType" />
+				<EntitySet Name="Sales"
+					EntityType="com.sap.pdms.og.production-overview.services.SalesType" />
+				<EntitySet Name="ProdOilToday"
+					EntityType="com.sap.pdms.og.production-overview.services.ProdOilTodayType" />
+				<EntitySet Name="ProdGasToday"
+					EntityType="com.sap.pdms.og.production-overview.services.ProdGasTodayType" />
+				<EntitySet Name="ProdOilYesday"
+					EntityType="com.sap.pdms.og.production-overview.services.ProdOilYesdayType" />
+				<EntitySet Name="ProdGasYesday"
+					EntityType="com.sap.pdms.og.production-overview.services.ProdGasYesdayType" />
+				<EntitySet Name="ProdCommit"
+					EntityType="com.sap.pdms.og.production-overview.services.ProdCommitType" />
+				<EntitySet Name="Production"
+					EntityType="com.sap.pdms.og.production-overview.ProductionType" />
+			</EntityContainer>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
